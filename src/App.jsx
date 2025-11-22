@@ -1,4 +1,7 @@
+import  React, { useState } from 'react'
 import ContactForm from './contactForm.jsx'
+import JsonForm from './jsonform.jsx'
+
 
 function App() {
   const [contact,setContact] = useState([])
@@ -9,6 +12,8 @@ function App() {
   }
   return (
     <div>
+
+      <JsonForm/>
          <ContactForm onSubmit={addcontact} />
       <ul>
         {contact.map((item, index) => (
